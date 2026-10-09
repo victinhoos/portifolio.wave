@@ -1,0 +1,57 @@
+header {
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--header-bg);
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadow);
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+}
+
+header.visivel {
+    transform: translateY(0);
+}
+
+.header-esquerdo h1 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-esquerdo h1::after {
+    content: '|'; 
+    color: var(--primary-color); 
+    font-weight: bold;
+    margin-left: 2px;
+    animation: piscarCursor 0.8s infinite; 
+}
+
+@keyframes piscarCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.header-direito ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-direito ul li a {
+    color: var(--text-color);
+}
+
+.header-direito ul li a:hover {
+    color: var(--primary-color);
+}

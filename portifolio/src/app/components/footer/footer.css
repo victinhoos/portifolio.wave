@@ -1,0 +1,97 @@
+footer {
+    display: flex;
+    flex-direction: column; 
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    padding: 3rem 0;
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.footer-ascii {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    color: var(--primary-color); 
+    margin-bottom: 3rem; 
+}
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 3rem;
+    padding: 0 2rem; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    width: 100%;
+}
+
+.footer-coluna {
+    flex: 1; 
+    min-width: 250px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-baixo {
+    display: flex;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    justify-content: center;
+    border-top: 1px solid var(--border-color); 
+}
+
+.titulo-footer {
+    display: flex;
+    align-items: center; 
+    gap: 0.5rem; 
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-family: var(--font-titulo);
+}
+
+.redes-sociais-lista,
+.contato-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.icon-footer,
+.contato-lista li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.icon-footer a,
+.contato-lista a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.icon-footer a:hover,
+.contato-lista a:hover {
+    color: var(--primary-color);
+}
+
+.clip-svg {
+    width: 24px; 
+    height: auto;
+    filter: var(--svg-filter);
+}
+
+.copy-destaque {
+    
+    color: var( --primary-color);
+    font-weight: bold; 
+    font-size: 1.2rem; 
+}

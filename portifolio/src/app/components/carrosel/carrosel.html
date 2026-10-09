@@ -1,0 +1,43 @@
+<section class="carrosel-container">
+    <div class="slider">
+        <div class="card" 
+             *ngFor="let p of projetos; let i = index" 
+             [ngClass]="{'ativo': i === indexAtivo}">
+            
+            <img [src]="p.banner" [alt]="p.titulo" class="card-bg">
+            
+            <div class="card-overlay">
+                <div class="conteudo">
+                    <span class="categoria-tag">{{ p.categoria }}</span>
+                    <h2>{{ p.titulo }}</h2>
+                    <p>{{ p.descricao }}</p>
+
+                    <div class="tech-list">
+                        <span *ngFor="let tech of p.techs" class="tech-item">{{ tech }}</span>
+                    </div>
+
+                    <div class="acoes">
+                        <a *ngIf="p.github" [href]="p.github" target="_blank" class="btn-acao">
+                            <img src="assets/icones/github.svg" alt="Github">
+                            Repositório
+                        </a>
+                        <a *ngIf="p.doc" [href]="p.doc" target="_blank" class="btn-acao">
+                            <img src="assets/icones/doc.svg" alt="Doc">
+                            Projeto / Docs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="nav-btn prev" (click)="anterior()">❮</button>
+    <button class="nav-btn next" (click)="proximo()">❯</button>
+
+    <div class="indicadores">
+        <span *ngFor="let p of projetos; let i = index" 
+              [class.active]="i === indexAtivo"
+              (click)="pularPara(i)">
+        </span>
+    </div>
+</section>

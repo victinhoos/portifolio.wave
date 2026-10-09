@@ -1,0 +1,179 @@
+[
+  {
+    "id": 1,
+    "titulo": "E-commerce API",
+    "categoria": "Back-End",
+    "descricao": "API robusta com Spring Boot, segurança JWT e integração com gateway de pagamento Stripe.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "SpringBoot",
+      "Java",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "github": "https://github.com/",
+    "doc": "https://swagger.io/"
+  },
+  {
+    "id": 2,
+    "titulo": "Dashboard Financeiro",
+    "categoria": "FullStack",
+    "descricao": "Plataforma de controle de gastos com gráficos interativos e exportação de relatórios em PDF.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "Laravel",
+      "Angular",
+      "TypeScript",
+      "PostgreSQL"
+    ],
+    "github": "https://github.com/",
+    "doc": null
+  },
+  {
+    "id": 3,
+    "titulo": "Landing Page Advocacia",
+    "categoria": "Front-End",
+    "descricao": "Site institucional focado em conversão, com SEO otimizado e design responsivo moderno.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "Angular"
+    ],
+    "github": null,
+    "doc": "https://vercel.app/"
+  },
+  {
+    "id": 4,
+    "titulo": "Microserviço de Logística",
+    "categoria": "Back-End",
+    "descricao": "Sistema de rastreio em tempo real utilizando mensageria e arquitetura de microserviços.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "SpringBoot",
+      "Docker",
+      "Java",
+      "PostgreSQL"
+    ],
+    "github": "https://github.com/",
+    "doc": "https://docs.com"
+  },
+  {
+    "id": 5,
+    "titulo": "Rede Social Dev",
+    "categoria": "FullStack",
+    "descricao": "Comunidade para desenvolvedores compartilharem snippets de código e portfólios.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "Angular",
+      "Laravel",
+      "TypeScript",
+      "Docker"
+    ],
+    "github": "https://github.com/",
+    "doc": ""
+  },
+  {
+    "id": 6,
+    "titulo": "Portal de Notícias",
+    "categoria": "Front-End",
+    "descricao": "Interface de leitura rápida com modo escuro, busca em tempo real e filtros por categoria.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "HTML",
+      "CSS",
+      "Angular",
+      "TypeScript"
+    ],
+    "github": "https://github.com/",
+    "doc": null
+  },
+  {
+    "id": 7,
+    "titulo": "Sistema de Agendamento",
+    "categoria": "Back-End",
+    "descricao": "Motor de reservas com validação de horários e envio automático de e-mails via AWS SES.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "Java",
+      "SpringBoot",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "github": "https://github.com/",
+    "doc": "https://aws.amazon.com/"
+  },
+  {
+    "id": 8,
+    "titulo": "App de Delivery",
+    "categoria": "FullStack",
+    "descricao": "Gerenciamento completo desde o pedido do cliente até a interface do entregador.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "Laravel",
+      "Angular",
+      "TypeScript",
+      "PostgreSQL"
+    ],
+    "github": "https://github.com/",
+    "doc": "https://google.com"
+  },
+  {
+    "id": 9,
+    "titulo": "Página de Captura",
+    "categoria": "Front-End",
+    "descricao": "Single Page Application (SPA) ultra rápida para lançamento de produtos digitais.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "HTML",
+      "CSS",
+      "TypeScript"
+    ],
+    "github": "https://github.com/",
+    "doc": null
+  },
+  {
+    "id": 10,
+    "titulo": "Gerador de Crachás",
+    "categoria": "Back-End",
+    "descricao": "Serviço que processa imagens e gera arquivos para impressão em massa.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "Java",
+      "SpringBoot",
+      "Docker"
+    ],
+    "github": "https://github.com/",
+    "doc": null
+  },
+  {
+    "id": 11,
+    "titulo": "Plataforma E-Learning",
+    "categoria": "FullStack",
+    "descricao": "Ambiente virtual de aprendizagem com suporte a vídeos, quizzes e certificação.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "Angular",
+      "Laravel",
+      "PostgreSQL",
+      "TypeScript"
+    ],
+    "github": "https://github.com/",
+    "doc": "https://learning.com"
+  },
+  {
+    "id": 12,
+    "titulo": "Blog Minimalista",
+    "categoria": "Front-End",
+    "descricao": "Focado em tipografia e legibilidade, totalmente integrado com headless CMS.",
+    "banner": "public/assets/imgs/white-label.png",
+    "techs": [
+      "HTML",
+      "CSS",
+      "Angular"
+    ],
+    "github": "https://github.com/",
+    "doc": null
+  }
+]

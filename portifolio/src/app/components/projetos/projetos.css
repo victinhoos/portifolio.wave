@@ -1,0 +1,231 @@
+#projetos-secao {
+    min-height: 100vh;
+    padding: 80px 0;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.header-projetos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-projetos h2 {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    color: var(--text-color);
+    font-family: var(--font-titulo);
+    margin-bottom: 20px;
+}
+
+.filtros-box {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filtros-box button {
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtros-box button.ativo {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.card-projeto {
+    position: relative;
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.card-projeto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-banner {
+    position: relative;
+    height: 230px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px; 
+}
+
+.card-banner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 10%, var(--bg-card) 100%);
+    z-index: 1;
+}
+
+.tag-categoria {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-titulo {
+    position: relative;
+    z-index: 2;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.card-body {
+    padding: 15px 25px 30px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 22px;
+}
+
+.descricao {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-item {
+    background: var(--bg-secondary);
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.tech-item i {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.links-container {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.btn-link {
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-link.github {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: 1px solid var(--text-color);
+}
+
+.btn-link.doc {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-link.doc:hover {
+    background: var(--bg-secondary);
+    border-color: var(--text-color);
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.paginacao button {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.paginacao button.ativo {
+    background: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}

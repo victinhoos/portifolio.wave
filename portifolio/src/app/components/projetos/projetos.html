@@ -1,0 +1,52 @@
+<section id="projetos-secao">
+  <div class="wrapper">
+    <div class="header-projetos">
+      <div class="filtros-box">
+        <button (click)="filtrar('Todos')" [class.ativo]="filtroAtivo === 'Todos'">Todos</button>
+        <button (click)="filtrar('FullStack')" [class.ativo]="filtroAtivo === 'FullStack'">FullStack</button>
+        <button (click)="filtrar('Back-End')" [class.ativo]="filtroAtivo === 'Back-End'">Back-End</button>
+        <button (click)="filtrar('Front-End')" [class.ativo]="filtroAtivo === 'Front-End'">Front-End</button>
+      </div>
+    </div>
+
+    <div class="grid-projetos">
+      <div class="card-projeto" *ngFor="let p of projetosExibidos">
+        <div class="card-banner">
+          <img *ngIf="p.banner" [src]="p.banner" alt="Banner do projeto">
+          <div class="banner-overlay"></div>
+          
+          <span class="tag-categoria">{{ p.categoria }}</span>
+          <h3 class="card-titulo">{{ p.titulo }}</h3>
+        </div>
+
+        <div class="card-body">
+          <p class="descricao">{{ p.descricao }}</p>
+          
+          <div class="tech-icons">
+            <div *ngFor="let tech of p.techsConfiguradas" class="tech-item">
+              <i [className]="'bi ' + tech.icone"></i>
+              <span class="tech-nome">{{ tech.nome }}</span>
+            </div>
+          </div>
+
+          <div class="links-container">
+            <a *ngIf="p.github" [href]="p.github" target="_blank" class="btn-link github">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+            <a *ngIf="p.doc" [href]="p.doc" target="_blank" class="btn-link doc">
+              Documentação
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="paginacao" *ngIf="totalPaginas.length > 1">
+      <button *ngFor="let n of totalPaginas" 
+              (click)="irParaPagina(n)" 
+              [class.ativo]="paginaAtual === n">
+        {{ n }}
+      </button>
+    </div>
+  </div>
+</section>
