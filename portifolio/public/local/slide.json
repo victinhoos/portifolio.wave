@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "titulo": "Projeto Um",
+    "categoria": "Web",
+    "descricao": "Descrição de teste do primeiro projeto.",
+    "banner": "https://picsum.photos/seed/projeto1/1200/600",
+    "techs": ["Angular", "TypeScript", "AWS"],
+    "linkedin": "https://linkedin.com/in/seu-perfil",
+    "github": "https://github.com/seu-usuario/projeto-1",
+    "doc": "https://exemplo.com/doc-1.pdf"
+  },
+  {
+    "id": 2,
+    "titulo": "Projeto Dois",
+    "categoria": "Backend",
+    "descricao": "Descrição de teste do segundo projeto.",
+    "banner": "https://picsum.photos/seed/projeto2/1200/600",
+    "techs": ["Java", "Spring Boot"],
+    "github": "https://github.com/seu-usuario/projeto-2"
+  },
+  {
+    "id": 3,
+    "titulo": "Projeto Três",
+    "categoria": "Cloud",
+    "descricao": "Descrição de teste do terceiro projeto, sem github nem doc.",
+    "banner": "https://picsum.photos/seed/projeto3/1200/600",
+    "techs": ["AWS", "S3", "Lambda"]
+  },
+  {
+    "id": 4,
+    "titulo": "Projeto Quatro",
+    "categoria": "Mobile",
+    "descricao": "Descrição de teste do quarto projeto.",
+    "banner": "https://picsum.photos/seed/projeto4/1200/600",
+    "techs": ["Ionic", "Angular"],
+    "doc": "https://exemplo.com/doc-4.pdf"
+  }
+]

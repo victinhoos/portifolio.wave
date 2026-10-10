@@ -1,44 +1,66 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import projetosData from '../../../../public/local/projetos.json';
-
+import { Subscription } from 'rxjs';
+import { Slide, SlideItem } from '../../services/slide';
 @Component({
   selector: 'app-carrosel',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './carrosel.html', 
-  styleUrls: ['./carrosel.css']   
+  templateUrl: './carrosel.html',
+  styleUrl: './carrosel.css'
 })
 export class Carrosel implements OnInit, OnDestroy {
-  
-  indexAtivo: number = 0;
-  timer: any;
-  projetos: any[] = projetosData;
+  indexAtivo = 0;
+  timer: ReturnType<typeof setInterval> | undefined;
+  projetos: SlideItem[] = [];
 
-  ngOnInit() {
-    this.iniciarAutoPlay();
+  private subscription?: Subscription;
+
+  constructor(private slideService: Slide) {}
+
+  ngOnInit(): void {
+    this.subscription = this.slideService.listar().subscribe({
+      next: (slides) => {
+        this.projetos = slides;
+
+        if (this.projetos.length > 1) {
+          this.iniciarAutoPlay();
+        }
+      },
+      error: (erro) => {
+        console.error('Erro ao carregar slides:', erro);
+      }
+    });
   }
 
-  ngOnDestroy() {
-    if (this.timer) clearInterval(this.timer);
+  ngOnDestroy(): void {
+    if (this.timer) {
+      clearInterval(this.timer);
+    }
+
+    this.subscription?.unsubscribe();
   }
 
-  iniciarAutoPlay() {
-    this.timer = setInterval(() => {
-      this.proximo();
-    }, 7000); 
+  iniciarAutoPlay(): void {
+    this.timer = setInterval(() => this.proximo(), 7000);
   }
 
-  proximo() {
+  proximo(): void {
+    if (this.projetos.length === 0) return;
+
     this.indexAtivo = (this.indexAtivo + 1) % this.projetos.length;
   }
 
-  anterior() {
-    this.indexAtivo = this.indexAtivo === 0 ? this.projetos.length - 1 : this.indexAtivo - 1;
+  anterior(): void {
+    if (this.projetos.length === 0) return;
+
+    this.indexAtivo =
+      this.indexAtivo === 0
+        ? this.projetos.length - 1
+        : this.indexAtivo - 1;
   }
 
-  pularPara(i: number) {
+  pularPara(i: number): void {
     this.indexAtivo = i;
   }
 }
